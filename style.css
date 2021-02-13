@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#container {
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+    max-width: 800px;
+    width: 90%;
+}
+
+img {
+    width: 100%;
+}
+
+#carouselButtons {
+    text-align: center;
+}
+
+.carouselButton {
+    font-size: 2rem;
+    padding: 5px;
+}
