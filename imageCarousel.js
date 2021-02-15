@@ -8,10 +8,10 @@ let currentIndex = 0;
 let autoplay;
 
 window.addEventListener('load', autoplayStart);
-prev.addEventListener('click', () => changeImg('l'));
-next.addEventListener('click', () => changeImg('r'));
 play.addEventListener('click', autoplayStart);
 pause.addEventListener('click', autoplayStop);
+prev.addEventListener('click', () => arrowButton('l'));
+next.addEventListener('click', () => arrowButton('r'));
 
 function changeImg(direction) {
   if (direction == 'r') {
@@ -21,6 +21,11 @@ function changeImg(direction) {
   }
   let nextImg = imgID[currentIndex];
   img.src = `/imgs/IMG_${nextImg}.JPG`;
+}
+
+function arrowButton(direction) {
+  changeImg(direction);
+  autoplayStop();
 }
 
 function autoplayStart() {
