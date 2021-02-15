@@ -1,8 +1,5 @@
 const img = document.querySelector('img');
-const prev = document.querySelector('#prev');
-const play = document.querySelector('#play');
-const pause = document.querySelector('#pause');
-const next = document.querySelector('#next');
+const [ prev, play, pause, next ] = document.querySelectorAll('button');
 const imgID = [ '0183', '1049', '1255', '0750', '1093', '1352', '0905', '1096' ];
 let currentIndex = 0;
 let autoplay;
