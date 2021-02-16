@@ -1,5 +1,5 @@
 const [ prev, play, pause, next ] = document.querySelectorAll("button");
-const img = document.querySelector("img");
+const img = document.querySelector("#carousel");
 const caption = document.querySelector("#caption");
 let currentIndex = 0;
 let autoplay;

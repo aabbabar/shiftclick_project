@@ -1,25 +1,47 @@
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  text-align: right;
+  margin-bottom: 0px;
+}
+
+h2 {
+  margin: 0px;
+  text-align: right;
+  font-size: 1rem;
+}
+
+#icons {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 0px;
+}
+
+#icons img {
+  width: 30px;
+  margin: 0px 5px;
 }
 
 #container {
-    font-family: 'Montserrat', sans-serif;
-    text-align: justify;
-    max-width: 800px;
-    width: 90%;
+  font-family: 'Montserrat', sans-serif;
+  text-align: justify;
+  max-width: 800px;
+  width: 90%;
 }
 
 img {
-    width: 100%;
+  width: 100%;
 }
 
 #carouselButtons {
-    text-align: center;
+  text-align: center;
 }
 
 .carouselButton {
-    font-size: 2rem;
-    padding: 5px;
+  font-size: 2rem;
+  padding: 5px;
 }
