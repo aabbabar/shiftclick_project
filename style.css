@@ -2,23 +2,43 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: linear-gradient(to bottom right, rgb(120, 120, 120), rgb(74, 74, 74));
+  color: rgb(255, 255, 255);
 }
 
 h1 {
   text-align: right;
   margin-bottom: 0px;
+  text-decoration: underline;
+  text-decoration-color: rgb(153, 255, 0);
+  text-decoration-style: double;
 }
 
 h2 {
   margin: 0px;
   text-align: right;
   font-size: 1rem;
+  text-decoration: underline;
+  text-decoration-color: rgb(0, 255, 255);
+  text-decoration-style: double;
+}
+
+h3 {
+  text-decoration: underline;
+  text-decoration-style: double;
+  text-underline-offset: 3px;
+  text-decoration-color: rgb(251, 89, 45);
+}
+
+hr {
+  color: rgb(174, 255, 0);
+  margin: 2px;
 }
 
 #icons {
   display: flex;
   justify-content: flex-end;
-  margin: 10px 0px;
+  margin: 8px 0px 4px;
 }
 
 #icons img {
@@ -33,7 +53,7 @@ h2 {
   width: 90%;
 }
 
-img {
+#carousel {
   width: 100%;
 }
 
@@ -44,4 +64,10 @@ img {
 .carouselButton {
   font-size: 2rem;
   padding: 5px;
+}
+
+#caption {
+  text-align: center;
+  font-size: 0.9rem;
+  margin: 0px;
 }

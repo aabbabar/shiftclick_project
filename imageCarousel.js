@@ -27,7 +27,7 @@ function arrowButton(direction) {
 }
 
 function autoplayStart() {
-  autoplay = setInterval(() => changeImg("r"), 1500);
+  autoplay = setInterval(() => changeImg("r"), 3000);
 }
 
 function autoplayStop() {
@@ -49,7 +49,7 @@ const imgs = [
   },
   {
     id      : "0750",
-    caption : "A fully splayed Collared Earthstar (Geastrum triplex)"
+    caption : "A fully unfurled Collared Earthstar (Geastrum triplex)"
   },
   {
     id      : "1352",
