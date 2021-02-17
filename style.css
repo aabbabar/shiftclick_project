@@ -75,6 +75,7 @@ hr {
 .page {
   width: 80%;
   border-color: rgb(151, 159, 119);
+  border-color: rgb(168, 196, 107);
   border-style: double;
   border-width: 5px;
   background-color: rgb(120, 120, 120);
