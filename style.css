@@ -2,7 +2,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: linear-gradient(to bottom right, rgb(120, 120, 120), rgb(74, 74, 74));
+  /* background-image: linear-gradient(to bottom right, rgb(120, 120, 120), rgb(74, 74, 74)); */
+  background-color: grey;
   color: rgb(255, 255, 255);
 }
 
@@ -19,7 +20,7 @@ h2 {
   text-align: right;
   font-size: 1rem;
   text-decoration: underline;
-  text-decoration-color: rgb(0, 255, 255);
+  text-decoration-color: rgb(252, 0, 173);
   text-decoration-style: double;
 }
 
@@ -27,12 +28,32 @@ h3 {
   text-decoration: underline;
   text-decoration-style: double;
   text-underline-offset: 3px;
-  text-decoration-color: rgb(251, 89, 45);
+  text-decoration-color: rgb(0, 255, 208);
 }
 
 hr {
   color: rgb(174, 255, 0);
-  margin: 2px;
+  margin: 1px;
+}
+
+#container {
+  font-family: 'Montserrat', sans-serif;
+  text-align: justify;
+  max-width: 800px;
+  width: 90%;
+}
+
+#navbar {
+  border-style: double;
+  border-width: 5px;
+  border-color: rgb(81, 0, 255);
+  padding: 5px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#navbar a {
+  color: rgb(55, 55, 55);
 }
 
 #icons {
@@ -46,11 +67,24 @@ hr {
   margin: 0px 5px;
 }
 
-#container {
-  font-family: 'Montserrat', sans-serif;
-  text-align: justify;
-  max-width: 800px;
-  width: 90%;
+#content {
+  display: flex;
+  justify-content: center;
+}
+
+.page {
+  width: 80%;
+  border-color: rgb(151, 159, 119);
+  border-style: double;
+  border-width: 5px;
+  background-color: rgb(120, 120, 120);
+  margin: 20px;
+  padding: 0px 25px;
+}
+
+#imageCarousel {
+  /* display: flex; */
+  justify-content: center;
 }
 
 #carousel {
