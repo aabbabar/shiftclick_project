@@ -17,7 +17,7 @@ function changeImg(direction) {
     currentIndex === 0 ? (currentIndex = imgs.length - 1) : currentIndex--;
   }
   let nextID = imgs[currentIndex].id;
-  img.src = `/imgs/IMG_${nextID}.JPG`;
+  img.src = `/imgs/fungi/IMG_${nextID}.JPG`;
   caption.textContent = imgs[currentIndex].caption;
 }
 
@@ -57,7 +57,7 @@ const imgs = [
   },
   {
     id      : "0905",
-    caption : "Beautiful labyrinthian patterns on underside of a Blushing Bracket (Daedeleopsis confragosa)"
+    caption : "Labyrinthian patterns on underside of a Blushing Bracket (Daedeleopsis confragosa)"
   },
   {
     id      : "1096",

@@ -39,6 +39,10 @@ hr {
   margin: 1px;
 }
 
+p {
+  line-height: 1.4rem;
+}
+
 #container {
   font-family: 'Montserrat', sans-serif;
   text-align: justify;
@@ -47,6 +51,7 @@ hr {
 }
 
 #navbar {
+  font-size: 1.2rem;
   border-style: double;
   border-width: 5px;
   border-color: rgb(81, 0, 255);
@@ -69,12 +74,18 @@ hr {
 #icons {
   display: flex;
   justify-content: flex-end;
-  margin: 8px 0px 4px;
+  margin: 12px 0px 4px;
 }
 
-#icons img {
+.icon {
   width: 30px;
   margin: 0px 5px;
+
+  -webkit-filter: opacity(25%);
+}
+
+.iconHover {
+  -webkit-filter: opacity(100%);
 }
 
 #content {
