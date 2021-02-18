@@ -2,7 +2,7 @@ const carouselButtons = document.querySelectorAll(".carouselButton");
 const [ prev, autoplay, next ] = carouselButtons;
 const img = document.querySelector("#image");
 const caption = document.querySelector("#caption");
-let currentIndex = 0;
+let index = 0;
 let isAutoplay = false;
 let autoplayer;
 
@@ -17,25 +17,26 @@ carouselButtons.forEach((button) => {
 });
 
 function changeImg(direction) {
-  if (direction == "r") {
-    currentIndex === imgs.length - 1 ? (currentIndex = 0) : currentIndex++;
-  } else if (direction == "l") {
-    currentIndex === 0 ? (currentIndex = imgs.length - 1) : currentIndex--;
+  if (direction === "r") {
+    index === imgs.length - 1 ? (index = 0) : index++;
+  } else if (direction === "l") {
+    index === 0 ? (index = imgs.length - 1) : index--;
   }
-  let nextID = imgs[currentIndex].id;
-  img.src = `./imgs/fungi/IMG_${nextID}.JPG`;
-  caption.textContent = imgs[currentIndex].caption;
+  let [ nextID, nextAlt ] = [ imgs[index].id, imgs[index].alt ];
+  img.src = `https://raw.githubusercontent.com/aabbabar/shiftclick_project/master/imgs/fungi/IMG_${nextID}.JPG`;
+  img.alt = nextAlt;
+  caption.textContent = imgs[index].caption;
 }
 
 function autoplayStart() {
   autoplayStop();
   autoplayer = setInterval(() => changeImg("r"), 3000);
-  autoplay.src = "./imgs/icons/autoplay-on.png";
+  autoplay.src = "https://raw.githubusercontent.com/aabbabar/shiftclick_project/master/imgs/icons/autoplay-on.png";
   isAutoplay = true;
 }
 
 function autoplayStop() {
-  autoplay.src = "./imgs/icons/autoplay-off.png";
+  autoplay.src = "https://raw.githubusercontent.com/aabbabar/shiftclick_project/master/imgs/icons/autoplay-off.png";
   clearInterval(autoplayer);
   isAutoplay = false;
 }
