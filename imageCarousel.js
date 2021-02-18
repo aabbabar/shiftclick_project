@@ -9,6 +9,7 @@ autoplay.addEventListener("click", toggleAutoplay);
 prev.addEventListener("click", () => arrowButton("l"));
 next.addEventListener("click", () => arrowButton("r"));
 window.addEventListener("load", autoplayStart);
+document.addEventListener("keydown", (keydown) => keyControl(keydown));
 
 function changeImg(direction) {
   if (direction == "r") {
@@ -24,6 +25,12 @@ function changeImg(direction) {
 function arrowButton(direction) {
   autoplayStop();
   changeImg(direction);
+}
+
+function keyControl(keydown) {
+  if (keydown.key == "ArrowLeft") arrowButton("l");
+  if (keydown.key == "ArrowRight") arrowButton("r");
+  if (keydown.key == " ") toggleAutoplay();
 }
 
 function autoplayStart() {
