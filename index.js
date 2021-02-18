@@ -39,4 +39,4 @@ function iconHover(icon, dir) {
   if (dir == "out") icon.classList.remove("iconHover");
 }
 
-window.addEventListener("load", () => showPage(links[2]));
+window.addEventListener("load", () => showPage(links[1]));

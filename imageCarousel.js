@@ -1,4 +1,5 @@
 const [ prev, autoplay, next ] = document.querySelectorAll(".carouselButton");
+const carouselButtons = [ prev, autoplay, next ];
 const img = document.querySelector("#image");
 const caption = document.querySelector("#caption");
 let currentIndex = 0;
@@ -10,6 +11,11 @@ prev.addEventListener("click", () => arrowButton("l"));
 next.addEventListener("click", () => arrowButton("r"));
 window.addEventListener("load", autoplayStart);
 document.addEventListener("keydown", (keydown) => keyControl(keydown));
+
+carouselButtons.forEach((button) => {
+  button.addEventListener("mouseover", () => button.classList.add("carouselButtonHover"));
+  button.addEventListener("mouseout", () => button.classList.remove("carouselButtonHover"));
+});
 
 function changeImg(direction) {
   if (direction == "r") {
@@ -28,9 +34,18 @@ function arrowButton(direction) {
 }
 
 function keyControl(keydown) {
-  if (keydown.key == "ArrowLeft") arrowButton("l");
-  if (keydown.key == "ArrowRight") arrowButton("r");
-  if (keydown.key == " ") toggleAutoplay();
+  if (keydown.key == "ArrowLeft") {
+    arrowButton("l");
+    flash(prev);
+  }
+  if (keydown.key == "ArrowRight") {
+    arrowButton("r");
+    flash(next);
+  }
+  if (keydown.key == " ") {
+    toggleAutoplay();
+    flash(autoplay);
+  }
 }
 
 function autoplayStart() {
@@ -48,6 +63,11 @@ function autoplayStop() {
 
 function toggleAutoplay() {
   isAutoplay ? autoplayStop() : autoplayStart();
+}
+
+function flash(button) {
+  button.classList.add("carouselButtonHover");
+  setTimeout(() => button.classList.remove("carouselButtonHover"), 150);
 }
 
 const imgs = [
@@ -69,7 +89,7 @@ const imgs = [
   },
   {
     id      : "1352",
-    caption : "Yellow Brain fungus (Tremella mesenterica) also known as 'witches' butter"
+    caption : 'Yellow Brain fungus (Tremella mesenterica) also known as "witches\' butter"'
   },
   {
     id      : "0905",

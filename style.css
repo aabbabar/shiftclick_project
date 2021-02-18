@@ -138,7 +138,11 @@ a:hover {
 
 .carouselButton {
   width: 40%;
-  -webkit-filter: opacity(50%);
+  -webkit-filter: opacity(40%);
+}
+
+.carouselButtonHover {
+  -webkit-filter: opacity(100%);
 }
 
 #caption {
