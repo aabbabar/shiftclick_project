@@ -1,14 +1,14 @@
-const [ prev, play, pause, next ] = document.querySelectorAll("button");
+const [ prev, autoplay, next ] = document.querySelectorAll("button");
 const img = document.querySelector("#carousel");
 const caption = document.querySelector("#caption");
 let currentIndex = 0;
-let autoplay;
+let isAutoplay = false;
+let autoplayer;
 
-window.addEventListener("load", autoplayStart);
-play.addEventListener("click", autoplayStart);
-pause.addEventListener("click", autoplayStop);
+autoplay.addEventListener("click", toggleAutoplay);
 prev.addEventListener("click", () => arrowButton("l"));
 next.addEventListener("click", () => arrowButton("r"));
+window.addEventListener("load", autoplayStart);
 
 function changeImg(direction) {
   if (direction == "r") {
@@ -22,16 +22,23 @@ function changeImg(direction) {
 }
 
 function arrowButton(direction) {
-  changeImg(direction);
   autoplayStop();
+  changeImg(direction);
 }
 
 function autoplayStart() {
-  autoplay = setInterval(() => changeImg("r"), 3000);
+  autoplayStop();
+  autoplayer = setInterval(() => changeImg("r"), 3000);
+  isAutoplay = true;
 }
 
 function autoplayStop() {
-  clearInterval(autoplay);
+  isAutoplay = false;
+  clearInterval(autoplayer);
+}
+
+function toggleAutoplay() {
+  isAutoplay ? autoplayStop() : autoplayStart();
 }
 
 const imgs = [
