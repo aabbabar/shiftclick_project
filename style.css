@@ -45,7 +45,7 @@ p {
 
 #container {
   font-family: 'Montserrat', sans-serif;
-  text-align: justify;
+
   max-width: 800px;
   width: 90%;
 }
@@ -80,8 +80,7 @@ p {
 .icon {
   width: 30px;
   margin: 0px 5px;
-
-  -webkit-filter: opacity(25%);
+  -webkit-filter: opacity(20%);
 }
 
 .iconHover {
@@ -95,8 +94,7 @@ p {
 
 .page {
   width: 80%;
-  border-color: rgb(151, 159, 119);
-  border-color: rgb(168, 196, 107);
+  border-color: rgb(136, 190, 87);
   border-style: double;
   border-width: 5px;
   background-color: rgb(120, 120, 120);
@@ -105,25 +103,31 @@ p {
 }
 
 #imageCarousel {
-  /* display: flex; */
-  justify-content: center;
+  /* position: relative; */
 }
 
-#carousel {
+#image {
   width: 100%;
 }
 
 #carouselButtons {
-  text-align: center;
+  /* position: relative; */
+  bottom: 3rem;
+  border: 2px solid rgba(147, 147, 147, 0.5);
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgba(139, 139, 139, 0.4);
+  margin: 0 18%;
 }
 
 .carouselButton {
-  font-size: 2rem;
-  padding: 5px;
+  width: 40%;
+  -webkit-filter: opacity(50%);
 }
 
 #caption {
   text-align: center;
   font-size: 0.9rem;
-  margin: 0px;
+  margin: 15px 0px;
 }

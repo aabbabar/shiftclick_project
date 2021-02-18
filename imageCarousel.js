@@ -1,5 +1,5 @@
-const [ prev, autoplay, next ] = document.querySelectorAll("button");
-const img = document.querySelector("#carousel");
+const [ prev, autoplay, next ] = document.querySelectorAll(".carouselButton");
+const img = document.querySelector("#image");
 const caption = document.querySelector("#caption");
 let currentIndex = 0;
 let isAutoplay = false;
@@ -29,12 +29,14 @@ function arrowButton(direction) {
 function autoplayStart() {
   autoplayStop();
   autoplayer = setInterval(() => changeImg("r"), 3000);
+  autoplay.src = "/imgs/icons/autoplay-on.png";
   isAutoplay = true;
 }
 
 function autoplayStop() {
-  isAutoplay = false;
+  autoplay.src = "/imgs/icons/autoplay-off.png";
   clearInterval(autoplayer);
+  isAutoplay = false;
 }
 
 function toggleAutoplay() {
