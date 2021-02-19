@@ -2,9 +2,8 @@ const carouselButtons = document.querySelectorAll(".carouselButton");
 const [ prev, autoplay, next ] = carouselButtons;
 const img = document.querySelector("#image");
 const caption = document.querySelector("#caption");
-let index = 0;
-let isAutoplay = false;
-let autoplayer;
+const root = "https://raw.githubusercontent.com/aabbabar/shiftclick_project/master";
+let [ index, autoplayer, isAutoplay ] = [ 0, 0, false ];
 
 autoplay.addEventListener("click", toggleAutoplay);
 prev.addEventListener("click", () => arrowButton("l"));
@@ -23,7 +22,7 @@ function changeImg(direction) {
     index === 0 ? (index = imgs.length - 1) : index--;
   }
   let [ nextID, nextAlt ] = [ imgs[index].id, imgs[index].alt ];
-  img.src = `https://raw.githubusercontent.com/aabbabar/shiftclick_project/master/imgs/fungi/IMG_${nextID}.JPG`;
+  img.src = `${root}/imgs/fungi/IMG_${nextID}.JPG`;
   img.alt = nextAlt;
   caption.textContent = imgs[index].caption;
 }
@@ -31,12 +30,12 @@ function changeImg(direction) {
 function autoplayStart() {
   autoplayStop();
   autoplayer = setInterval(() => changeImg("r"), 3000);
-  autoplay.src = "https://raw.githubusercontent.com/aabbabar/shiftclick_project/master/imgs/icons/autoplay-on.png";
+  autoplay.src = `${root}/imgs/icons/autoplay-on.png`;
   isAutoplay = true;
 }
 
 function autoplayStop() {
-  autoplay.src = "https://raw.githubusercontent.com/aabbabar/shiftclick_project/master/imgs/icons/autoplay-off.png";
+  autoplay.src = `${root}/imgs/icons/autoplay-off.png`;
   clearInterval(autoplayer);
   isAutoplay = false;
 }
@@ -73,7 +72,7 @@ function keyControl(keydown) {
 
 const imgs = [
   {
-    id      : "0183",
+    id    : "0183",
     caption : "Pearl Oysters (Pleurotus ostreatus) growing in spiral formations",
     alt     : "Pearl Oysters"
   },
