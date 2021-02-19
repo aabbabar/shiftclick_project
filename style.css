@@ -1,9 +1,12 @@
+html {
+  height: 100%;
+  background-image: linear-gradient(to bottom right, rgb(181, 181, 181), rgb(56, 56, 56));
+}
+
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* background-image: linear-gradient(to bottom right, rgb(120, 120, 120), rgb(74, 74, 74)); */
-  background-color: grey;
   color: rgb(255, 255, 255);
 }
 
@@ -52,17 +55,17 @@ a {
 }
 
 a:hover {
-  color: rgb(174, 255, 0);
+  color: rgb(153, 255, 0);
 }
 
 #container {
   font-family: 'Montserrat', sans-serif;
-
   max-width: 800px;
   width: 90%;
 }
 
 #navbar {
+  background-color: rgb(135, 135, 135);
   font-size: 1.2rem;
   border-style: double;
   border-width: 5px;
@@ -117,17 +120,11 @@ a:hover {
   padding: 0px 25px;
 }
 
-#imageCarousel {
-  /* position: relative; */
-}
-
 #image {
   width: 100%;
 }
 
 #carouselButtons {
-  /* position: relative; */
-  bottom: 3rem;
   border: 2px solid rgba(147, 147, 147, 0.5);
   width: 60%;
   display: flex;
@@ -153,7 +150,7 @@ a:hover {
 
 #contact-icons {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 #contact-icons img {
