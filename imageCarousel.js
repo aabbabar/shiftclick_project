@@ -24,7 +24,7 @@ function changeImg(direction) {
   let [ nextID, nextAlt ] = [ imgs[index].id, imgs[index].alt ];
   img.src = `${root}/imgs/fungi/IMG_${nextID}.JPG`;
   img.alt = nextAlt;
-  caption.textContent = imgs[index].caption;
+  caption.innerHTML = imgs[index].caption;
 }
 
 function autoplayStart() {
@@ -73,37 +73,37 @@ function keyControl(keydown) {
 const imgs = [
   {
     id    : "0183",
-    caption : "Pearl Oysters (Pleurotus ostreatus) growing in spiral formations",
+    caption : "Pearl Oysters <i>(Pleurotus ostreatus)</i> growing in spiral formations",
     alt     : "Pearl Oysters"
   },
   {
     id      : "1049",
-    caption : "A convergent growth of Amber Jelly fungus (Exidia recisia)",
+    caption : "A convergent growth of Amber Jelly fungus <i>(Exidia recisia)</i>",
     alt     : "Amber Jelly Fungus"
   },
   {
     id      : "1255",
-    caption : "An Artist's Conk (Ganoderma applanatum) covered in yellow flat-footed fly galls",
+    caption : "An Artist's Conk <i>(Ganoderma applanatum)</i> covered in yellow flat-footed fly galls",
     alt     : "Artist's Conk"
   },
   {
     id      : "0750",
-    caption : "A fully unfurled Collared Earthstar (Geastrum triplex)",
+    caption : "A fully unfurled Collared Earthstar <i>(Geastrum triplex)</i>",
     alt     : "Collared Earthstar"
   },
   {
     id      : "1352",
-    caption : 'Yellow Brain fungus (Tremella mesenterica) also known as "witches\' butter"',
+    caption : 'Yellow Brain fungus <i>(Tremella mesenterica)</i> also known as "witches\' butter"',
     alt     : "Yellow Brain fungus"
   },
   {
     id      : "0905",
-    caption : "Labyrinthian patterns on underside of a Blushing Bracket (Daedeleopsis confragosa)",
+    caption : "Labyrinthian patterns on underside of a Blushing Bracket <i>(Daedeleopsis confragosa)</i>",
     alt     : "Blushing Bracket"
   },
   {
     id      : "1096",
-    caption : "A small congregation of Shaggy Scalycaps (Pholiota squarrosa)",
+    caption : "A small congregation of Shaggy Scalycaps <i>(Pholiota squarrosa)</i>",
     alt     : "Shaggy Scalycaps"
   }
 ];
