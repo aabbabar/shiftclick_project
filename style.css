@@ -69,7 +69,7 @@ a:hover {
   font-size: 1.2rem;
   border-style: double;
   border-width: 5px;
-  border-color: rgb(94, 169, 2);
+  border-color: rgb(96, 0, 249);
   padding: 5px;
   display: flex;
   justify-content: space-evenly;
@@ -98,7 +98,7 @@ a:hover {
 
 .icon {
   margin: 0px 5px;
-  -webkit-filter: opacity(20%);
+  -webkit-filter: opacity(40%);
 }
 
 .iconHover {
@@ -112,7 +112,7 @@ a:hover {
 
 .page {
   width: 80%;
-  border-color: rgb(103, 50, 226);
+  border-color: rgb(103, 169, 4);
   border-style: double;
   border-width: 5px;
   background-color: rgb(89, 89, 89);
