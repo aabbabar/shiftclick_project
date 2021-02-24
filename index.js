@@ -11,8 +11,6 @@ for (let i = 0; i < pages.length; i++) {
 links.forEach((link) => {
   link.page.style.display = "none";
   link.nav.addEventListener("click", () => showPage(link));
-  link.nav.addEventListener("mouseover", () => navHover(link, "over"));
-  link.nav.addEventListener("mouseout", () => navHover(link, "out"));
 });
 
 icons.forEach((icon) => {
@@ -27,11 +25,6 @@ function showPage(link) {
   });
   link.page.style.display = "block";
   link.nav.classList.add("navSelected");
-}
-
-function navHover(link, dir) {
-  if (dir == "over") link.nav.classList.add("navHover");
-  if (dir == "out") link.nav.classList.remove("navHover");
 }
 
 function iconHover(icon, dir) {
